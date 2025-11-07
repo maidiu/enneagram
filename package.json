@@ -1,0 +1,8 @@
+{
+  "name": "chrisenneagram",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm install --prefix frontend",
+    "build": "npm run build --prefix frontend && rm -rf dist && cp -R frontend/dist ./dist"
+  }
+}
