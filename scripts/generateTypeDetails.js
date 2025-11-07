@@ -1,0 +1,1710 @@
+const fs = require('fs');
+const path = require('path');
+
+const outputPath = path.join(__dirname, '..', 'frontend', 'src', 'typeDetails.json');
+
+const types = [];
+
+types.push({
+  id: 1,
+  name: "The Principled Reformer",
+  center: "Body",
+  instinct_triad: "Conservation",
+  core_summary: {
+    one_liner: "Ethical improvers who channel gut energy into order and integrity.",
+    short_paragraph:
+      "Type Ones sense a personal mission to elevate whatever they touch. They notice deviations from standards, organize systems, and feel responsible for making things right. Growth arrives when they befriend anger, relax tension, and allow goodness to exist before improvement.",
+    core_motivation: "To live rightly and leave the world better than they found it.",
+    core_fear: "Being corrupt, wrong, or morally defective."
+  },
+  dynamics: {
+    passion: "Anger (Resentment)",
+    fixation: "Perfectionism",
+    virtue: "Serenity",
+    holy_idea: "Perfection"
+  },
+  structure: {
+    center_description: "Instinctive type who disciplines bodily energy into conscientious, corrective action.",
+    stance: "Compliant",
+    harmony: "Competency",
+    object_relation: "Frustration"
+  },
+  arrows: {
+    stress_point: 4,
+    growth_point: 7,
+    stress_description:
+      "Under stress they absorb Type Four moodiness and self-critique, amplifying personal disappointment.",
+    growth_description:
+      "In growth they borrow Type Seven spontaneity, loosening rules and enjoying present-moment gratitude."
+  },
+  wings: {
+    left_wing: 9,
+    right_wing: 2,
+    description_left: "1w9 brings steady calm, philosophical detachment, and understated reform.",
+    description_right: "1w2 adds advocacy, warmth, and service-driven activism."
+  },
+  instincts: {
+    self_pres: {
+      nickname: "The Sentinel",
+      description: "Keeps life orderly with carefully curated routines, budgets, and pragmatic safeguards.",
+      focus: ["stability", "preparation", "tidiness"]
+    },
+    social: {
+      nickname: "The Standard-Bearer",
+      description: "Champions systems, policies, and shared values, rallying communities around best practices.",
+      focus: ["duty", "civic order", "fairness"]
+    },
+    sexual: {
+      nickname: "The Crusader",
+      description: "Pursues intense one-to-one reform, urging partners to embody authenticity and ideals.",
+      focus: ["zeal", "intimacy", "transformation"]
+    },
+    overview:
+      "Self-pres Ones secure foundations, social Ones enforce common standards, sexual Ones ignite wholehearted reform."
+  },
+  levels_of_development: {
+    overview:
+      "Healthy Ones blend principle with acceptance, average Ones tighten around rules, unhealthy Ones become punitive when the world refuses to comply.",
+    levels: [
+      {
+        level: 1,
+        band: "Healthy",
+        label: "The Wise Realist",
+        summary: "Acts from inner balance, improving life without rigidity.",
+        inner_world: "Calm conscience and quiet joy in usefulness.",
+        outer_behavior: "Mentors with patience, models proportionate effort.",
+        markers: ["Even tone", "Invites feedback", "Humor"],
+        growth_notes: "Keep contemplative pauses that reconnect you to innate goodness."
+      },
+      {
+        level: 2,
+        band: "Healthy",
+        label: "The Purposeful Improver",
+        summary: "Sets clear standards while remaining collaborative and encouraging.",
+        inner_world: "Grateful focus and manageable urgency.",
+        outer_behavior: "Organizes teams and celebrates incremental wins.",
+        markers: ["Constructive notes", "Shared ownership", "Warm accountability"],
+        growth_notes: "Voice appreciation before correction to keep hearts open."
+      },
+      {
+        level: 3,
+        band: "Healthy",
+        label: "The Balanced Organizer",
+        summary: "Balances detail work with trust in others' approaches.",
+        inner_world: "Energized by purposeful structure without strain.",
+        outer_behavior: "Delegates wisely and adapts plans gracefully.",
+        markers: ["Flexible checklists", "Visible relaxation", "Contextual judgment"],
+        growth_notes: "Schedule light-hearted activity to discharge the inner critic."
+      },
+      {
+        level: 4,
+        band: "Average",
+        label: "The Pragmatic Idealist",
+        summary: "Begins to tighten procedures and personal standards.",
+        inner_world: "Underlying tension and fear of being blamed.",
+        outer_behavior: "Corrects frequently and double-checks work.",
+        markers: ["Should statements", "Rigid routines", "Sighing"],
+        growth_notes: "Let one imperfection stand each day to build tolerance."
+      },
+      {
+        level: 5,
+        band: "Average",
+        label: "The Corrective Technician",
+        summary: "Focus narrows to errors; resentment builds silently.",
+        inner_world: "Loneliness in carrying responsibility alone.",
+        outer_behavior: "Reworks tasks and struggles to delegate.",
+        markers: ["Late nights", "Tense jaw", "Checklists everywhere"],
+        growth_notes: "Share worries vulnerably rather than tightening rules."
+      },
+      {
+        level: 6,
+        band: "Average",
+        label: "The Moralizer",
+        summary: "Convinced only their standard preserves order.",
+        inner_world: "Irritated vigilance and suppressed anger.",
+        outer_behavior: "Lectures, debates, and divides people into right or wrong.",
+        markers: ["Sharp tone", "Black-and-white statements", "Little play"],
+        growth_notes: "Name anger aloud and pair critique with empathy."
+      },
+      {
+        level: 7,
+        band: "Unhealthy",
+        label: "The Avenger",
+        summary: "Releases pent-up rage in punitive bursts.",
+        inner_world: "Narratives of betrayal and righteous fury.",
+        outer_behavior: "Shames, withdraws affection, or sabotages projects.",
+        markers: ["Outbursts", "Harsh judgments", "Isolation"],
+        growth_notes: "Seek support to process anger somatically before acting."
+      },
+      {
+        level: 8,
+        band: "Unhealthy",
+        label: "The Punitive Controller",
+        summary: "Imposes strict control and intolerance for mistakes.",
+        inner_world: "Fear of collapse masked by aggression.",
+        outer_behavior: "Humiliates offenders and enforces minutiae.",
+        markers: ["Micromanaging", "Public scolding", "Rigid posture"],
+        growth_notes: "Step out of authority roles and engage restorative practices."
+      },
+      {
+        level: 9,
+        band: "Unhealthy",
+        label: "The Self-Condemning Nihilist",
+        summary: "Ideal collapses; they despair and castigate themselves and others.",
+        inner_world: "Overwhelming shame and hopelessness.",
+        outer_behavior: "Withdraws or destroys what feels impure.",
+        markers: ["Shutting down", "Somatic collapse", "Catastrophic talk"],
+        growth_notes: "Pursue trauma-informed care and rebuild simple, kind routines."
+      }
+    ]
+  },
+  patterns: {
+    strengths: ["Integrity", "Craftsmanship", "Reliability", "Purpose", "Discernment"],
+    pitfalls: ["Rigidity", "Harsh self-talk", "Perfectionism", "Resentment", "Overcontrol"],
+    typical_childhood_story: "Believed love depended on being responsible and correct.",
+    common_mistypings: ["Type 3", "Type 5", "Type 6"]
+  },
+  growth_practices: {
+    inner_work: [
+      "Name inner critic phrases and soften them.",
+      "Track gratitude to balance fault-finding.",
+      "Experiment with good-enough outcomes.",
+      "Invite curiosity before judgment."
+    ],
+    relational_practices: [
+      "Ask how others prefer feedback.",
+      "Share mistakes to normalize learning.",
+      "Schedule unstructured fun with loved ones.",
+      "Pair appreciation with requests."
+    ],
+    somatic_practices: [
+      "Progressive relaxation of shoulders and jaw.",
+      "Mindful walking focusing on footfall.",
+      "Playful movement or dance for spontaneity."
+    ]
+  },
+  relationships: {
+    what_others_appreciate: ["Reliability", "Fairness", "Follow-through", "Moral courage"],
+    what_others_struggle_with: ["Criticism", "Tension", "High expectations", "Defensiveness"],
+    notes_for_partners_friends:
+      "Affirm their efforts, invite rest, and collaborate on rituals that are about enjoyment rather than improvement."
+  },
+  further_reading: {
+    naranjo_chapters: ["Character and Neurosis – Type One"],
+    chestnut_sections: ["The Complete Enneagram – One subtypes"],
+    riso_sections: ["Personality Types – Type One"]
+  }
+});
+
+types.push({
+  id: 2,
+  name: "The Warm Advocate",
+  center: "Heart",
+  instinct_triad: "Relation",
+  core_summary: {
+    one_liner: "Relationship-builders who anticipate needs to feel essential and loved.",
+    short_paragraph:
+      "Twos tune into emotional climates, offering warmth and assistance to secure connection. Pride hides personal needs, yet their generosity can mend estrangement. Growth invites boundary clarity, receptive posture, and love that flows both ways.",
+    core_motivation: "To feel loved, appreciated, and significant.",
+    core_fear: "Being unwanted or unworthy of love."
+  },
+  dynamics: {
+    passion: "Pride",
+    fixation: "Flattery",
+    virtue: "Humility",
+    holy_idea: "Freedom"
+  },
+  structure: {
+    center_description: "Heart type who orients attention around relationships and emotional attunement.",
+    stance: "Compliant",
+    harmony: "Positive",
+    object_relation: "Rejection"
+  },
+  arrows: {
+    stress_point: 8,
+    growth_point: 4,
+    stress_description:
+      "Stress brings Type Eight bluntness and controlling anger when unappreciated.",
+    growth_description:
+      "In growth they borrow Type Four depth, honoring their own feelings and limits."
+  },
+  wings: {
+    left_wing: 1,
+    right_wing: 3,
+    description_left: "2w1 is principled, dutiful, and service-driven.",
+    description_right: "2w3 is charismatic, image-aware, and promotional."
+  },
+  instincts: {
+    self_pres: {
+      nickname: "The Hearth Keeper",
+      description: "Shows love through practical caretaking, comfort, and steady support.",
+      focus: ["nurture", "stability", "hospitality"]
+    },
+    social: {
+      nickname: "The Connector",
+      description: "Curates networks, remembers details, and orchestrates belonging.",
+      focus: ["inclusion", "opportunity", "group morale"]
+    },
+    sexual: {
+      nickname: "The Enchanter",
+      description: "Cultivates intense one-to-one bonds with devotion and charm.",
+      focus: ["intimacy", "attention", "fusion"]
+    },
+    overview:
+      "Self-pres Twos nurture tangibly, social Twos weave communities, sexual Twos pursue passionate bonding."
+  },
+  levels_of_development: {
+    overview:
+      "Healthy Twos love freely while receiving, average Twos track reciprocity, unhealthy Twos manipulate to avoid abandonment.",
+    levels: [
+      {
+        level: 1,
+        band: "Healthy",
+        label: "The Compassionate Ally",
+        summary: "Offers presence without strings and trusts reciprocal care.",
+        inner_world: "Felt worthiness and open-hearted calm.",
+        outer_behavior: "Listens deeply, honors boundaries, invites reciprocity.",
+        markers: ["Soft eye contact", "Clear yes/no", "Warm tone"],
+        growth_notes: "Begin days by affirming intrinsic worth before serving others."
+      },
+      {
+        level: 2,
+        band: "Healthy",
+        label: "The Encouraging Companion",
+        summary: "Amplifies others' gifts and celebrates progress.",
+        inner_world: "Buoyant gratitude anchored in self-awareness.",
+        outer_behavior: "Names strengths, accepts help, shares personal needs.",
+        markers: ["Supportive notes", "Balanced talk", "Authentic compliments"],
+        growth_notes: "State personal desires before offering assistance."
+      },
+      {
+        level: 3,
+        band: "Healthy",
+        label: "The Generous Coordinator",
+        summary: "Mobilizes networks without self-erasure.",
+        inner_world: "Purpose and connection held with ease.",
+        outer_behavior: "Delegates, mentors, and protects rest time.",
+        markers: ["Shared calendars", "Rest days honored", "Mutual favors"],
+        growth_notes: "Schedule solo downtime first when planning commitments."
+      },
+      {
+        level: 4,
+        band: "Average",
+        label: "The Strategic Supporter",
+        summary: "Help becomes calculated and monitored for appreciation.",
+        inner_world: "Anxious scanning for reassurance.",
+        outer_behavior: "Anticipates needs unasked, hints about sacrifices.",
+        markers: ["Frequent check-ins", "Hinting", "Difficulty resting"],
+        growth_notes: "Ask if support is wanted before stepping in."
+      },
+      {
+        level: 5,
+        band: "Average",
+        label: "The Approval Seeker",
+        summary: "Identity fuses with helpfulness; pride hides exhaustion.",
+        inner_world: "Guilt when resting and fear of being forgotten.",
+        outer_behavior: "Flatters, over-functions, personalizes rejection.",
+        markers: ["Overapologizing", "Text monitoring", "Rescuing"],
+        growth_notes: "Practice direct I-statements about energy limits."
+      },
+      {
+        level: 6,
+        band: "Average",
+        label: "The Possessive Rescuer",
+        summary: "Intervenes without permission and keeps score.",
+        inner_world: "Jealous vigilance and resentment.",
+        outer_behavior: "Triangulates or guilt-trips to secure closeness.",
+        markers: ["Heavy sighs", "Victim language", "Boundary blur"],
+        growth_notes: "Journal resentments and turn them into explicit requests."
+      },
+      {
+        level: 7,
+        band: "Unhealthy",
+        label: "The Manipulative Controller",
+        summary: "Uses guilt, seduction, or crisis to keep others nearby.",
+        inner_world: "Panic and fear of abandonment.",
+        outer_behavior: "Creates dependency then withholds affection.",
+        markers: ["Emotional blackmail", "Clinging", "Rapid mood shifts"],
+        growth_notes: "Seek counseling focused on attachment repair and self-soothing."
+      },
+      {
+        level: 8,
+        band: "Unhealthy",
+        label: "The Coercive Dependent",
+        summary: "Erupts when autonomy is threatened, demanding loyalty.",
+        inner_world: "Shame intertwined with rage.",
+        outer_behavior: "Threatens to withdraw support or invades privacy.",
+        markers: ["Ultimatums", "Tracking devices", "Possessive statements"],
+        growth_notes: "Build professional support and reestablish healthy boundaries."
+      },
+      {
+        level: 9,
+        band: "Unhealthy",
+        label: "The Despairing Martyr",
+        summary: "Collapses into self-neglect and passive resentment.",
+        inner_world: "Belief that love must be earned through suffering.",
+        outer_behavior: "Withdraws affection, nurses grudges, somatizes stress.",
+        markers: ["Chronic fatigue", "Illness flares", "Hopeless tone"],
+        growth_notes: "Focus on trauma recovery, grief work, and receiving unconditional care."
+      }
+    ]
+  },
+  patterns: {
+    strengths: ["Empathy", "Hospitality", "Encouragement", "Relational intuition", "Generosity"],
+    pitfalls: ["People pleasing", "Boundary confusion", "Indirect needs", "Competitive giving", "Resentment"],
+    typical_childhood_story: "Learned that being helpful kept relationships secure.",
+    common_mistypings: ["Type 3", "Type 4", "Type 9"]
+  },
+  growth_practices: {
+    inner_work: [
+      "Start the day naming your own needs.",
+      "Track resentment as a cue to rest.",
+      "Receive compliments without deflecting.",
+      "Meditate on being loved without earning it."
+    ],
+    relational_practices: [
+      "Ask before helping.",
+      "Share emotions plainly instead of hinting.",
+      "Invite friends to care for you.",
+      "Clarify expectations out loud."
+    ],
+    somatic_practices: [
+      "Hand-on-heart breathing for self-compassion.",
+      "Solo walks without devices.",
+      "Chest-opening stretches followed by grounding squats."
+    ]
+  },
+  relationships: {
+    what_others_appreciate: ["Warmth", "Dependability", "Thoughtful gestures", "Loyal support"],
+    what_others_struggle_with: ["Overinvolvement", "Hidden expectations", "Difficulty saying no", "Emotional pressure"],
+    notes_for_partners_friends:
+      "Affirm their presence, encourage downtime, and discuss boundaries openly so love is mutual."
+  },
+  further_reading: {
+    naranjo_chapters: ["Character and Neurosis – Type Two"],
+    chestnut_sections: ["The Complete Enneagram – Two (subtypes)"],
+    riso_sections: ["Personality Types – Type Two"]
+  }
+});
+
+types.push({
+  id: 3,
+  name: "The Adaptive Achiever",
+  center: "Heart",
+  instinct_triad: "Adaptation",
+  core_summary: {
+    one_liner: "Success-oriented shapeshifters who optimise image and output to feel valuable.",
+    short_paragraph:
+      "Threes read expectations and deliver polished results. Feelings are streamlined to stay productive, yet authenticity erodes when performance eclipses essence. Growth invites truthful self-appraisal, sustainable pacing, and relationships that prize being over doing.",
+    core_motivation: "To be valuable, admired, and successful.",
+    core_fear: "Being worthless or a failure."
+  },
+  dynamics: {
+    passion: "Vanity",
+    fixation: "Deceit",
+    virtue: "Truthfulness",
+    holy_idea: "Hope"
+  },
+  structure: {
+    center_description: "Heart type who manages emotion by aligning identity with achievement feedback.",
+    stance: "Assertive",
+    harmony: "Competency",
+    object_relation: "Attachment"
+  },
+  arrows: {
+    stress_point: 9,
+    growth_point: 6,
+    stress_description: "Pressure pulls them toward Type Nine numbness and disengagement.",
+    growth_description: "In growth they borrow Type Six loyalty and cooperation, encouraging authenticity with teams."
+  },
+  wings: {
+    left_wing: 2,
+    right_wing: 4,
+    description_left: "3w2 is people-forward, charming, and promotional.",
+    description_right: "3w4 is image-conscious, creative, and introspective."
+  },
+  instincts: {
+    self_pres: {
+      nickname: "The Efficient Maestro",
+      description: "Optimises routines, finances, and personal branding to stay ahead.",
+      focus: ["systems", "metrics", "self-sufficiency"]
+    },
+    social: {
+      nickname: "The Prestige Player",
+      description: "Aligns with high-performing groups and tracks hierarchy to maintain status.",
+      focus: ["reputation", "networking", "team success"]
+    },
+    sexual: {
+      nickname: "The Magnetic Dynamo",
+      description: "Uses intensity and vision to recruit partners into ambitious adventures.",
+      focus: ["chemistry", "impact", "momentum"]
+    },
+    overview:
+      "Self-pres Threes maximise efficiency, social Threes showcase shared wins, sexual Threes galvanise one-to-one partnerships."
+  },
+  levels_of_development: {
+    overview:
+      "Healthy Threes align sincerity with ambition, average Threes equate identity with achievement, unhealthy Threes manipulate impressions and risk collapse when facades crack.",
+    levels: [
+      {
+        level: 1,
+        band: "Healthy",
+        label: "The Congruent Visionary",
+        summary: "Purpose and authenticity line up; success serves the mission.",
+        inner_world: "Hopeful, values-driven, emotionally present.",
+        outer_behavior: "Shares credit, mentors generously, keeps promises realistic.",
+        markers: ["Transparent metrics", "Team recognition", "Steady pace"],
+        growth_notes: "Keep routines that connect goals to personal values."
+      },
+      {
+        level: 2,
+        band: "Healthy",
+        label: "The Motivated Producer",
+        summary: "Executes goals with collaboration and flexibility.",
+        inner_world: "Focused enthusiasm and confidence.",
+        outer_behavior: "Sets strategy, adapts to feedback, tracks progress openly.",
+        markers: ["Clear objectives", "Constructive coaching", "Responsive planning"],
+        growth_notes: "Include feeling check-ins before pivoting."
+      },
+      {
+        level: 3,
+        band: "Healthy",
+        label: "The Skilled Presenter",
+        summary: "Communicates vision compellingly while staying real.",
+        inner_world: "Proud yet grounded and open to vulnerability.",
+        outer_behavior: "Tells stories, reads the room, normalises imperfection.",
+        markers: ["Attentive listening", "Realistic messaging", "Shared wins"],
+        growth_notes: "Voice doubts with trusted allies regularly."
+      },
+      {
+        level: 4,
+        band: "Average",
+        label: "The Competitive Performer",
+        summary: "Image management intensifies; comparisons drive pace.",
+        inner_world: "Anxious monitoring of external benchmarks.",
+        outer_behavior: "Multitasks, curates persona, avoids visible failure.",
+        markers: ["Status tracking", "Rapid pivots", "Polished surface"],
+        growth_notes: "Invite direct feedback that includes what is not working."
+      },
+      {
+        level: 5,
+        band: "Average",
+        label: "The Task Machine",
+        summary: "Workaholism expands and feelings are postponed.",
+        inner_world: "Emotional flatness and fear that pausing will expose failure.",
+        outer_behavior: "Lives on checklists, delegates superficially, overpromises.",
+        markers: ["Working through meals", "Role jargon", "Tight schedule"],
+        growth_notes: "Block recovery time before accepting new commitments."
+      },
+      {
+        level: 6,
+        band: "Average",
+        label: "The Reputation Manager",
+        summary: "Edits truth to protect image and avoid vulnerability.",
+        inner_world: "Feels fraudulent and guarded.",
+        outer_behavior: "Spins setbacks, cherry-picks data, keeps the mask on.",
+        markers: ["Selective reporting", "Charm offensive", "Avoids critique"],
+        growth_notes: "Confess small misses quickly to rebuild honesty."
+      },
+      {
+        level: 7,
+        band: "Unhealthy",
+        label: "The Opportunistic Deceiver",
+        summary: "Cuts corners or appropriates credit to stay ahead.",
+        inner_world: "Panicked about slipping and resentful of obstacles.",
+        outer_behavior: "Manipulates numbers, undermines rivals, gaslights critics.",
+        markers: ["Questionable metrics", "Back-channeling", "Irritability"],
+        growth_notes: "Secure accountability focused on integrity repair."
+      },
+      {
+        level: 8,
+        band: "Unhealthy",
+        label: "The Exploitative Schemer",
+        summary: "Treats people as assets to leverage; intimidation surfaces.",
+        inner_world: "Hollow defiance and terror of insignificance.",
+        outer_behavior: "Fabricates credentials, coerces teammates, ignores ethics.",
+        markers: ["Threats", "Credit stealing", "Grandiose spin"],
+        growth_notes: "Step out of the spotlight while rebuilding ethical foundations."
+      },
+      {
+        level: 9,
+        band: "Unhealthy",
+        label: "The Empty Chameleon",
+        summary: "Facade collapses; burnout or depression emerges.",
+        inner_world: "Feels worthless without output and unsure who they are.",
+        outer_behavior: "Withdraws, self-sabotages, may confess fabrications.",
+        markers: ["Exhaustion", "Cancelled plans", "Identity confusion"],
+        growth_notes: "Engage therapy centred on intrinsic worth and sustainable pacing."
+      }
+    ]
+  },
+  patterns: {
+    strengths: ["Strategic focus", "Adaptability", "Drive", "Optimism", "Inspirational leadership"],
+    pitfalls: ["Workaholism", "Image management", "Emotional detachment", "Impatience", "Competitive streak"],
+    typical_childhood_story: "Noticed achievement brought praise, so performed and hid softer feelings to stay valued.",
+    common_mistypings: ["Type 1", "Type 7", "Type 8"]
+  },
+  growth_practices: {
+    inner_work: [
+      "Journal honestly about motives and emotions each week.",
+      "Name goals that serve meaning, not only metrics.",
+      "Set guardrails around availability to protect rest.",
+      "Celebrate process and learning, not only wins."
+    ],
+    relational_practices: [
+      "Share unfinished drafts to normalise imperfection.",
+      "Invite critique without reprisal and act on it.",
+      "Express appreciation for effort and teamwork.",
+      "Reveal fears and doubts directly with trusted people."
+    ],
+    somatic_practices: [
+      "Slow cardio or yoga to downshift pace.",
+      "Body scans focusing on chest and jaw tension.",
+      "Breathwork with long exhales to exit performance mode."
+    ]
+  },
+  relationships: {
+    what_others_appreciate: ["Motivation", "Resourcefulness", "Confidence", "Inspiration"],
+    what_others_struggle_with: ["Work-first priorities", "Surface-level sharing", "Competition", "Over-scheduling"],
+    notes_for_partners_friends:
+      "Affirm their worth beyond results, plan tech-free quality time, and co-create rhythms that honour rest."
+  },
+  further_reading: {
+    naranjo_chapters: ["Character and Neurosis – Type Three"],
+    chestnut_sections: ["The Complete Enneagram – Type Three subtypes"],
+    riso_sections: ["Personality Types – Type Three"]
+  }
+});
+
+types.push({
+  id: 4,
+  name: "The Intuitive Individualist",
+  center: "Heart",
+  instinct_triad: "Relation",
+  core_summary: {
+    one_liner: "Meaning-driven creatives who track what is missing and seek authentic expression.",
+    short_paragraph:
+      "Fours experience life through a rich emotional lens, longing for a unique identity. They deepen conversations and art yet can fixate on absence. Growth invites appreciating ordinary goodness, sharing feelings cleanly, and pairing imagination with action.",
+    core_motivation: "To find and express their authentic self.",
+    core_fear: "Having no identity or personal significance."
+  },
+  dynamics: {
+    passion: "Envy",
+    fixation: "Melancholy",
+    virtue: "Equanimity",
+    holy_idea: "Originality"
+  },
+  structure: {
+    center_description: "Heart type who compares internal moods with outer reality to secure meaning.",
+    stance: "Withdrawn",
+    harmony: "Reactive",
+    object_relation: "Rejection"
+  },
+  arrows: {
+    stress_point: 2,
+    growth_point: 1,
+    stress_description: "Stress pulls them toward Type Two overreaching for connection and reassurance.",
+    growth_description: "In growth they borrow Type One grounded discipline that anchors creativity."
+  },
+  wings: {
+    left_wing: 3,
+    right_wing: 5,
+    description_left: "4w3 adds expressive flair and desire for recognition.",
+    description_right: "4w5 brings introspection, intellectual depth, and privacy."
+  },
+  instincts: {
+    self_pres: {
+      nickname: "The Temperate Aesthete",
+      description: "Curates cozy rituals and refined spaces to steady mood swings.",
+      focus: ["comfort", "ritual", "self-soothing"]
+    },
+    social: {
+      nickname: "The Outsider",
+      description: "Navigates groups by highlighting difference and offering reflective critique.",
+      focus: ["belonging", "role", "symbolic impact"]
+    },
+    sexual: {
+      nickname: "The Romantic Intensity",
+      description: "Pursues transformative bonds, oscillating between allure and withdrawal.",
+      focus: ["fusion", "drama", "idealization"]
+    },
+    overview:
+      "Self-pres Fours seek grounded comfort, social Fours examine identity in community, sexual Fours chase high-intensity partnership."
+  },
+  levels_of_development: {
+    overview:
+      "Healthy Fours translate depth into contribution, average Fours dramatize longing, unhealthy Fours spiral into self-absorption and despair.",
+    levels: [
+      {
+        level: 1,
+        band: "Healthy",
+        label: "The Grounded Original",
+        summary: "Creates meaning while staying rooted in daily life.",
+        inner_world: "Steady inspiration and self-acceptance.",
+        outer_behavior: "Shares art generously and listens with empathy.",
+        markers: ["Consistent practice", "Warm curiosity", "Balanced mood"],
+        growth_notes: "Maintain body-based routines that keep creativity embodied."
+      },
+      {
+        level: 2,
+        band: "Healthy",
+        label: "The Expressive Storyteller",
+        summary: "Uses personal narrative to illuminate universal themes.",
+        inner_world: "Emotional richness tempered by perspective.",
+        outer_behavior: "Communicates poetically and invites others' stories.",
+        markers: ["Poetic language", "Eye contact", "Shared laughter"],
+        growth_notes: "Mix depth with doses of levity."
+      },
+      {
+        level: 3,
+        band: "Healthy",
+        label: "The Creative Integrator",
+        summary: "Transforms pain into service or art with disciplined follow-through.",
+        inner_world: "Purposeful focus and emotional agility.",
+        outer_behavior: "Collaborates reliably and delivers work on time.",
+        markers: ["Accountability", "Scheduled sessions", "Timely responses"],
+        growth_notes: "Use partnerships to sustain momentum."
+      },
+      {
+        level: 4,
+        band: "Average",
+        label: "The Intense Romantic",
+        summary: "Longing heightens and moods colour perception.",
+        inner_world: "Feeling misunderstood and longing for rescue.",
+        outer_behavior: "Alternates presence and withdrawal while testing loyalty.",
+        markers: ["Dramatic language", "Symbolic gestures", "Frequent sighs"],
+        growth_notes: "Ask directly for reassurance instead of hinting."
+      },
+      {
+        level: 5,
+        band: "Average",
+        label: "The Self-Absorbed Dreamer",
+        summary: "Retreats into imagination, postponing real engagement.",
+        inner_world: "Shame about ordinariness and comparison with others.",
+        outer_behavior: "Avoids mundane tasks and resists feedback.",
+        markers: ["Procrastination", "Metaphoric speech", "Isolation"],
+        growth_notes: "Ground through sensory detail by naming five tangible experiences daily."
+      },
+      {
+        level: 6,
+        band: "Average",
+        label: "The Withdrawn Critic",
+        summary: "Harbours grudges about being overlooked; envy fuels critique.",
+        inner_world: "Feels defective and angry that others seem happier.",
+        outer_behavior: "Uses biting sarcasm and sabotages closeness.",
+        markers: ["Cynical tone", "Testing loyalty", "Brooding"],
+        growth_notes: "Name envy vulnerably and practise gratitude for present support."
+      },
+      {
+        level: 7,
+        band: "Unhealthy",
+        label: "The Tormented Outsider",
+        summary: "Romanticises suffering and oscillates between despair and idealism.",
+        inner_world: "Emotional storms and fixation on loss.",
+        outer_behavior: "Expresses despair theatrically and rejects help.",
+        markers: ["Catastrophic thinking", "Weeping", "Alienation"],
+        growth_notes: "Seek therapeutic alliance and daily structure immediately."
+      },
+      {
+        level: 8,
+        band: "Unhealthy",
+        label: "The Self-Destructive Melancholic",
+        summary: "Engages in harmful coping and believes they are beyond repair.",
+        inner_world: "Numbness or engulfing shame.",
+        outer_behavior: "Pushes away allies, may self-harm or abuse substances.",
+        markers: ["Hopeless narratives", "Substance use", "Erratic sleep"],
+        growth_notes: "Prioritise medical support and sensory grounding."
+      },
+      {
+        level: 9,
+        band: "Unhealthy",
+        label: "The Despairing Phantom",
+        summary: "Withdraws completely, trapped in fantasies and suicidal ideation.",
+        inner_world: "Feels empty and invisible, longing for rescue.",
+        outer_behavior: "Disengages from reality and may romanticise death.",
+        markers: ["Dissociation", "Refusal of help", "Morbid talk"],
+        growth_notes: "Seek intensive treatment and rebuild trust in ordinary connection."
+      }
+    ]
+  },
+  patterns: {
+    strengths: ["Creativity", "Emotional insight", "Authenticity", "Aesthetic vision", "Depth of empathy"],
+    pitfalls: ["Envy", "Moodiness", "Self-absorption", "Procrastination", "Idealising suffering"],
+    typical_childhood_story: "Felt different or misunderstood, believing uniqueness was required to be loved.",
+    common_mistypings: ["Type 2", "Type 5", "Type 6"]
+  },
+  growth_practices: {
+    inner_work: [
+      "Track emotional weather and intentionally name what is working.",
+      "Keep a gratitude list for ordinary pleasures.",
+      "Share feelings in real time rather than after ruminating.",
+      "Time-box creative work to finish projects."
+    ],
+    relational_practices: [
+      "State needs plainly without testing others.",
+      "Ask for reassurance directly instead of withdrawing.",
+      "Offer appreciation when supported.",
+      "Collaborate on grounded tasks with trusted people."
+    ],
+    somatic_practices: [
+      "Use sensory anchors such as holding something warm.",
+      "Practice diaphragmatic breathing when emotion surges.",
+      "Engage in rhythmic movement like walking or swimming to steady mood."
+    ]
+  },
+  relationships: {
+    what_others_appreciate: ["Depth", "Romantic imagination", "Attentive listening", "Creative inspiration"],
+    what_others_struggle_with: ["Emotional volatility", "Withdrawal", "Comparisons", "Need for specialness"],
+    notes_for_partners_friends:
+      "Affirm their presence in everyday moments and co-create gentle structure that keeps connection steady."
+  },
+  further_reading: {
+    naranjo_chapters: ["Character and Neurosis – Type Four"],
+    chestnut_sections: ["The Complete Enneagram – Type Four subtypes"],
+    riso_sections: ["Personality Types – Type Four"]
+  }
+});
+
+types.push({
+  id: 5,
+  name: "The Perceptive Investigator",
+  center: "Head",
+  instinct_triad: "Conservation",
+  core_summary: {
+    one_liner: "Observant analysts who conserve energy and master knowledge to feel capable and safe.",
+    short_paragraph:
+      "Fives retreat to the mind, studying systems and maintaining autonomy. They guard privacy and resources, fearing intrusion or depletion. Maturity blends insight with embodiment—sharing expertise, re-engaging feelings, and trusting interdependence.",
+    core_motivation: "To understand, be competent, and maintain sufficient inner resources.",
+    core_fear: "Being overwhelmed, incapable, or depleted."
+  },
+  dynamics: {
+    passion: "Avarice",
+    fixation: "Stinginess",
+    virtue: "Non-attachment",
+    holy_idea: "Omniscience"
+  },
+  structure: {
+    center_description: "Head type who responds to uncertainty by hoarding knowledge and maintaining distance.",
+    stance: "Withdrawn",
+    harmony: "Competency",
+    object_relation: "Detachment"
+  },
+  arrows: {
+    stress_point: 7,
+    growth_point: 8,
+    stress_description: "Stress scatters them into Type Seven idea-hopping without grounding.",
+    growth_description: "In growth they borrow Type Eight embodiment, asserting boundaries and acting decisively."
+  },
+  wings: {
+    left_wing: 4,
+    right_wing: 6,
+    description_left: "5w4 adds artistic sensitivity and depth of feeling.",
+    description_right: "5w6 introduces pragmatic problem-solving and loyalty."
+  },
+  instincts: {
+    self_pres: {
+      nickname: "The Castle",
+      description: "Builds secure routines, minimises needs, and stockpiles knowledge to stay independent.",
+      focus: ["self-sufficiency", "privacy", "minimalism"]
+    },
+    social: {
+      nickname: "The Specialist",
+      description: "Shares expertise within chosen communities, valuing intellectual belonging.",
+      focus: ["competence", "role clarity", "knowledge exchange"]
+    },
+    sexual: {
+      nickname: "The Iconoclast",
+      description: "Seeks intense mind-to-mind fusion, challenging assumptions and probing truth.",
+      focus: ["penetrating insight", "authenticity", "ideological intimacy"]
+    },
+    overview:
+      "Self-pres Fives conserve energy, social Fives invest in niche expertise, sexual Fives pursue deep intellectual bonds."
+  },
+  levels_of_development: {
+    overview:
+      "Healthy Fives share insight generously, average Fives detach to manage anxiety, unhealthy Fives become isolated, eccentric, and fearful of intrusion.",
+    levels: [
+      {
+        level: 1,
+        band: "Healthy",
+        label: "The Enlightened Observer",
+        summary: "Perceives patterns lucidly and balances knowledge with compassion.",
+        inner_world: "Spacious curiosity and grounded calm.",
+        outer_behavior: "Offers wisdom humbly and participates without overextension.",
+        markers: ["Measured speech", "Grounded posture", "Kind humour"],
+        growth_notes: "Maintain body practices to stay present while analysing."
+      },
+      {
+        level: 2,
+        band: "Healthy",
+        label: "The Scholarly Synthesizer",
+        summary: "Connects disciplines creatively and collaborates selectively.",
+        inner_world: "Engaged curiosity and trust in inner resources.",
+        outer_behavior: "Produces thoughtful work and shares insights generously.",
+        markers: ["Reading notes", "Thoughtful questions", "Timely replies"],
+        growth_notes: "Schedule social contact to keep networks alive."
+      },
+      {
+        level: 3,
+        band: "Healthy",
+        label: "The Competent Specialist",
+        summary: "Applies expertise practically while balancing solitude and contribution.",
+        inner_world: "Feels capable and resourced with clear limits.",
+        outer_behavior: "Sets boundaries, meets commitments, and teaches effectively.",
+        markers: ["Clear availability", "Concise briefs", "Respectful boundaries"],
+        growth_notes: "Name emotions as well as facts during debriefs."
+      },
+      {
+        level: 4,
+        band: "Average",
+        label: "The Detached Analyst",
+        summary: "Withdraws to think and limits commitments to preserve energy.",
+        inner_world: "Cautious observation and fear of being drained.",
+        outer_behavior: "Keeps conversations cerebral and avoids spontaneity.",
+        markers: ["Short replies", "Closed body language", "Minimal schedule"],
+        growth_notes: "Share one personal detail each day with a trusted person."
+      },
+      {
+        level: 5,
+        band: "Average",
+        label: "The Withholding Observer",
+        summary: "Protects time fiercely, hoards knowledge, and becomes aloof.",
+        inner_world: "Feels depleted easily and wary of intrusion.",
+        outer_behavior: "Says little, guards resources, avoids obligations.",
+        markers: ["Sparse communication", "Minimal eye contact", "Closed door"],
+        growth_notes: "Offer small acts of generosity to rebuild trust in reciprocity."
+      },
+      {
+        level: 6,
+        band: "Average",
+        label: "The Cynical Recluse",
+        summary: "Grows skeptical, retreats into niche obsessions, neglects basics.",
+        inner_world: "Anxious vigilance and suspicion of others' motives.",
+        outer_behavior: "Avoids social contact, neglects health, uses sarcasm.",
+        markers: ["Erratic meals", "Conspiracy talk", "Isolation"],
+        growth_notes: "Reintroduce routines for eating, sleeping, and movement."
+      },
+      {
+        level: 7,
+        band: "Unhealthy",
+        label: "The Nihilistic Hermit",
+        summary: "Severs ties and becomes consumed by mental constructs.",
+        inner_world: "Feels empty yet overstimulated and distrustful of the world.",
+        outer_behavior: "Barricades space, hoards information, avoids contact.",
+        markers: ["Drawn shades", "Stacked supplies", "Monologues"],
+        growth_notes: "Seek therapeutic support and reintroduce safe relational contact."
+      },
+      {
+        level: 8,
+        band: "Unhealthy",
+        label: "The Obsessive Detached",
+        summary: "Loses contact with reality and spirals into fearful ideation.",
+        inner_world: "Fragmented thinking and pervasive fear.",
+        outer_behavior: "Neglects body, distrusts helpers, repeats rituals.",
+        markers: ["Disorganised space", "Mistrust", "Compulsive routines"],
+        growth_notes: "Require clinical stabilisation and relational consistency."
+      },
+      {
+        level: 9,
+        band: "Unhealthy",
+        label: "The Catatonic Isolate",
+        summary: "Shuts down entirely, unable to communicate or self-care.",
+        inner_world: "Void of energy and overwhelmed by reality.",
+        outer_behavior: "Neglects survival needs and may detach from speech.",
+        markers: ["Catatonia", "Severe malnutrition", "Blank stare"],
+        growth_notes: "Immediate medical intervention and long-term relational rehabilitation are vital."
+      }
+    ]
+  },
+  patterns: {
+    strengths: ["Analytical clarity", "Objectivity", "Inventive thinking", "Calm under pressure", "Respect for boundaries"],
+    pitfalls: ["Emotional detachment", "Resource hoarding", "Isolation", "Overthinking", "Neglect of body"],
+    typical_childhood_story: "Felt safest retreating into the mind, believing self-sufficiency was necessary.",
+    common_mistypings: ["Type 1", "Type 4", "Type 9"]
+  },
+  growth_practices: {
+    inner_work: [
+      "Track energy levels and plan nourishing breaks.",
+      "Name emotions with trusted allies weekly.",
+      "Share expertise before it feels perfect.",
+      "Practice gratitude for support received."
+    ],
+    relational_practices: [
+      "State availability instead of disappearing.",
+      "Invite collaborative problem-solving.",
+      "Thank people who respect your boundaries.",
+      "Offer personal history snippets to build intimacy."
+    ],
+    somatic_practices: [
+      "Weight-bearing exercise to inhabit the body.",
+      "Tai chi or qigong for grounded flow.",
+      "Three deep belly breaths before speaking to stay present."
+    ]
+  },
+  relationships: {
+    what_others_appreciate: ["Insight", "Calm perspective", "Reliability once committed", "Original ideas"],
+    what_others_struggle_with: ["Emotional distance", "Limited availability", "Secretiveness", "Minimal cues"],
+    notes_for_partners_friends:
+      "Honour their need for space while inviting gradual sharing; create gentle rituals for connection without pressure."
+  },
+  further_reading: {
+    naranjo_chapters: ["Character and Neurosis – Type Five"],
+    chestnut_sections: ["The Complete Enneagram – Type Five subtypes"],
+    riso_sections: ["Personality Types – Type Five"]
+  }
+});
+
+types.push({
+  id: 6,
+  name: "The Loyal Guardian",
+  center: "Head",
+  instinct_triad: "Relation",
+  core_summary: {
+    one_liner: "Vigilant troubleshooters who scan for risk and build dependable alliances.",
+    short_paragraph:
+      "Sixes anticipate threats and strategise for safety. They oscillate between caution and counterphobic boldness, questioning authority while craving reliable guidance. Growth invites trusting inner authority, tolerating ambiguity, and channelling courage into purposeful commitment.",
+    core_motivation: "To feel secure, supported, and prepared.",
+    core_fear: "Being without guidance or feeling unsafe."
+  },
+  dynamics: {
+    passion: "Fear (Anxiety)",
+    fixation: "Doubt",
+    virtue: "Courage",
+    holy_idea: "Faith"
+  },
+  structure: {
+    center_description: "Head type whose attention locks onto potential problems to maintain safety.",
+    stance: "Compliant",
+    harmony: "Reactive",
+    object_relation: "Ambivalence"
+  },
+  arrows: {
+    stress_point: 3,
+    growth_point: 9,
+    stress_description: "Stress pushes them into Type Three overdrive, masking anxiety with productivity.",
+    growth_description: "In growth they borrow Type Nine equanimity, widening perspective and calming the nervous system."
+  },
+  wings: {
+    left_wing: 5,
+    right_wing: 7,
+    description_left: "6w5 is analytical, introverted, and cautious.",
+    description_right: "6w7 is outgoing, quick-thinking, and counterphobic."
+  },
+  instincts: {
+    self_pres: {
+      nickname: "The Warm Sentry",
+      description: "Creates security through routines, detailed planning, and loyal family bonds.",
+      focus: ["preparedness", "comfort", "practical support"]
+    },
+    social: {
+      nickname: "The Trooper",
+      description: "Commits to groups, causes, and clear roles to maintain cohesion.",
+      focus: ["duty", "alliances", "protocol"]
+    },
+    sexual: {
+      nickname: "The Warrior",
+      description: "Faces fear by charging toward it, testing loyalty through intensity.",
+      focus: ["courage", "mutual testing", "adrenaline"]
+    },
+    overview:
+      "Self-pres Sixes secure tangible safety, social Sixes invest in dependable structures, sexual Sixes seek courage through challenge."
+  },
+  levels_of_development: {
+    overview:
+      "Healthy Sixes trust intuition and act bravely, average Sixes manage anxiety through questioning, unhealthy Sixes become paranoid or self-defeating.",
+    levels: [
+      {
+        level: 1,
+        band: "Healthy",
+        label: "The Grounded Trustee",
+        summary: "Balances scepticism with faith and demonstrates steadfast courage.",
+        inner_world: "Secure in inner guidance and supportive alliances.",
+        outer_behavior: "Provides reliable counsel and stands up for the vulnerable.",
+        markers: ["Measured tone", "Thoughtful questions", "Steady presence"],
+        growth_notes: "Maintain contemplative practices that nurture inner authority."
+      },
+      {
+        level: 2,
+        band: "Healthy",
+        label: "The Strategic Collaborator",
+        summary: "Assesses risk realistically and designs contingency plans without panic.",
+        inner_world: "Confidence tempered with humility.",
+        outer_behavior: "Facilitates teamwork and encourages balanced debate.",
+        markers: ["Shared plans", "Humour", "Clear roles"],
+        growth_notes: "Celebrate courageous actions to reinforce resilience."
+      },
+      {
+        level: 3,
+        band: "Healthy",
+        label: "The Loyal Implementer",
+        summary: "Executes plans diligently and balances duty with rest.",
+        inner_world: "Purposeful focus and trust in competence.",
+        outer_behavior: "Coordinates logistics, communicates transparently, seeks consensus.",
+        markers: ["Follow-through", "Fairness", "Honest updates"],
+        growth_notes: "Integrate mindfulness breaks to keep the nervous system regulated."
+      },
+      {
+        level: 4,
+        band: "Average",
+        label: "The Questioning Loyalist",
+        summary: "Doubts increase; they seek reassurance and imagine worst-case scenarios.",
+        inner_world: "Cycling what-ifs and fear of misjudging.",
+        outer_behavior: "Polls others and hesitates to act alone.",
+        markers: ["Repeated checking", "Restless pacing", "Detailed hypotheticals"],
+        growth_notes: "Name specific fears and test them with reality-based experiments."
+      },
+      {
+        level: 5,
+        band: "Average",
+        label: "The Defensive Doubter",
+        summary: "Projects suspicion outward and alternates between compliance and defiance.",
+        inner_world: "Feels unsupported and anticipates betrayal.",
+        outer_behavior: "Challenges motives then seeks reassurance.",
+        markers: ["Sceptical tone", "Ambivalent stance", "Busy worry"],
+        growth_notes: "Develop body-based calming skills to interrupt anxiety spirals."
+      },
+      {
+        level: 6,
+        band: "Average",
+        label: "The Reactive Skeptic",
+        summary: "Spreads anxiety, becomes cynical, and lashes out at perceived threats.",
+        inner_world: "Feels persecuted and trapped between fight and flight.",
+        outer_behavior: "Displays sarcasm, nitpicking, and loyalty tests.",
+        markers: ["Irritability", "Frequent venting", "Rapid messaging"],
+        growth_notes: "Name trusted allies and articulate explicit agreements." },
+      {
+        level: 7,
+        band: "Unhealthy",
+        label: "The Paranoid Contrarian",
+        summary: "Sees conspiracies, provokes attacks to confirm fears.",
+        inner_world: "Terrified and angry, convinced danger is imminent.",
+        outer_behavior: "Projects blame and oscillates between attack and withdrawal.",
+        markers: ["Aggressive questioning", "Hypervigilant scanning", "Hostility"],
+        growth_notes: "Seek trauma-informed therapy, reduce threat inputs, rebuild reality-testing." }
+      ,
+      {
+        level: 8,
+        band: "Unhealthy",
+        label: "The Authoritarian Rebel",
+        summary: "Either submits to extreme authorities or rebels destructively.",
+        inner_world: "Fragmented trust and desperation for certainty.",
+        outer_behavior: "Joins rigid groups or sabotages systems violently.",
+        markers: ["Rigid ideology", "All-or-nothing loyalty", "Explosive reactions"],
+        growth_notes: "Stabilise routines and engage consistent therapeutic support." }
+      ,
+      {
+        level: 9,
+        band: "Unhealthy",
+        label: "The Panicked Victim",
+        summary: "Overwhelmed by terror, collapses into helplessness or obsessive defences.",
+        inner_world: "Feels doomed and incapable of functioning.",
+        outer_behavior: "Freezes, becomes dependent, or self-sabotages.",
+        markers: ["Severe phobia", "Disabling anxiety", "Catastrophic speech"],
+        growth_notes: "Emergency care—stabilise physically and rebuild agency with support." }
+    ]
+  },
+  patterns: {
+    strengths: ["Loyalty", "Thorough analysis", "Protective instincts", "Team orientation", "Humility"],
+    pitfalls: ["Anxiety", "Over-questioning", "Indecision", "Pessimism", "Authority issues"],
+    typical_childhood_story: "Felt safest when scanning for threats and aligning with trustworthy allies.",
+    common_mistypings: ["Type 1", "Type 2", "Type 9"]
+  },
+  growth_practices: {
+    inner_work: [
+      "List evidence of competence each day.",
+      "Use breath practices to calm the nervous system.",
+      "Act on the first reasonable option before over-analysing.",
+      "Track when worst-case stories do not come true."
+    ],
+    relational_practices: [
+      "Share fears directly instead of testing others.",
+      "Ask for reassurance plainly when needed.",
+      "Express appreciation when others show up.",
+      "Clarify expectations in writing to reduce ambiguity."
+    ],
+    somatic_practices: [
+      "Grounding exercises with weighted blankets or leaning into a wall.",
+      "Box breathing to settle fight-or-flight.",
+      "Martial arts or yoga to integrate courage and calm."
+    ]
+  },
+  relationships: {
+    what_others_appreciate: ["Dependability", "Preparedness", "Courage under fire", "Loyal friendship"],
+    what_others_struggle_with: ["Questioning motives", "Pessimistic outlook", "Ambivalence", "Defensive humour"],
+    notes_for_partners_friends:
+      "Offer consistent reassurance, share plans transparently, and celebrate their bravery when they take risks."
+  },
+  further_reading: {
+    naranjo_chapters: ["Character and Neurosis – Type Six"],
+    chestnut_sections: ["The Complete Enneagram – Type Six subtypes"],
+    riso_sections: ["Personality Types – Type Six"]
+  }
+});
+
+types.push({
+  id: 7,
+  name: "The Visionary Enthusiast",
+  center: "Head",
+  instinct_triad: "Adaptation",
+  core_summary: {
+    one_liner: "Optimistic synthesizers who chase possibility and reframe pain through plans and play.",
+    short_paragraph:
+      "Sevens scan for inspiring options, avoiding constraint or emotional heaviness. They amplify ideas, connect people, and stay in motion. Growth invites savoring the present, feeling discomfort fully, and delivering on chosen commitments.",
+    core_motivation: "To experience freedom, variety, and satisfaction while avoiding pain.",
+    core_fear: "Being trapped in deprivation, boredom, or emotional distress."
+  },
+  dynamics: {
+    passion: "Gluttony",
+    fixation: "Planning",
+    virtue: "Sobriety",
+    holy_idea: "Wisdom"
+  },
+  structure: {
+    center_description: "Head type who manages anxiety by generating options and focusing on future possibilities.",
+    stance: "Assertive",
+    harmony: "Positive",
+    object_relation: "Attachment"
+  },
+  arrows: {
+    stress_point: 1,
+    growth_point: 5,
+    stress_description: "Under stress they adopt Type One rigidity and self-criticism.",
+    growth_description: "In growth they borrow Type Five depth, slowing down to observe and commit to fewer, richer pursuits."
+  },
+  wings: {
+    left_wing: 6,
+    right_wing: 8,
+    description_left: "7w6 is community-oriented, loyal, and planning-focused.",
+    description_right: "7w8 is bold, entrepreneurial, and assertive."
+  },
+  instincts: {
+    self_pres: {
+      nickname: "The Gourmet Planner",
+      description: "Curates pleasurable experiences, stockpiling comforts and adventures.",
+      focus: ["comfort", "future fun", "resourcefulness"]
+    },
+    social: {
+      nickname: "The Network Catalyst",
+      description: "Rallies groups around new ideas and collaborative brainstorming.",
+      focus: ["ideas", "community", "shared excitement"]
+    },
+    sexual: {
+      nickname: "The Adventurous Spark",
+      description: "Seeks intense connections, quick to pursue chemistry and shared expeditions.",
+      focus: ["fusion", "stimulation", "novelty"]
+    },
+    overview:
+      "Self-pres Sevens savour comforts, social Sevens orchestrate group possibility, sexual Sevens chase high-intensity bonds."
+  },
+  levels_of_development: {
+    overview:
+      "Healthy Sevens integrate joy with discipline, average Sevens chase stimulation and reframe pain, unhealthy Sevens become impulsive, erratic, and escapist.",
+    levels: [
+      {
+        level: 1,
+        band: "Healthy",
+        label: "The Grateful Visionary",
+        summary: "Experiences abundance within limits and balances enthusiasm with wisdom.",
+        inner_world: "Content, inspired, and connected to purpose.",
+        outer_behavior: "Commits to meaningful ventures and practises presence.",
+        markers: ["Follow-through", "Mindful savoring", "Generosity"],
+        growth_notes: "Keep gratitude and reflection rhythms to anchor joy in reality."
+      },
+      {
+        level: 2,
+        band: "Healthy",
+        label: "The Inspirational Futurist",
+        summary: "Synthesises trends into actionable plans, inspiring others with optimism.",
+        inner_world: "Hopeful and grounded in inner guidance.",
+        outer_behavior: "Shares vision, builds collaborative roadmaps, listens to feedback.",
+        markers: ["Strategic ideation", "Inclusive leadership", "Adaptability"],
+        growth_notes: "Regularly evaluate commitments to avoid overextension."
+      },
+      {
+        level: 3,
+        band: "Healthy",
+        label: "The Joyful Generalist",
+        summary: "Keeps curiosity alive while honoring promises.",
+        inner_world: "Light yet centered, open to emotional nuance.",
+        outer_behavior: "Creates engaging experiences and supports others' joy.",
+        markers: ["Humor", "Collaborative spirit", "Balanced schedule"],
+        growth_notes: "Schedule reflection time after major activities to integrate."
+      },
+      {
+        level: 4,
+        band: "Average",
+        label: "The Busy Enthusiast",
+        summary: "Keeps options open and reframes negatives quickly.",
+        inner_world: "Restless, anticipating future pleasures.",
+        outer_behavior: "Multi-tasks, plans trips, speaks rapidly.",
+        markers: ["Packed calendar", "Storytelling", "Jumping topics"],
+        growth_notes: "Limit active projects to three and review progress weekly."
+      },
+      {
+        level: 5,
+        band: "Average",
+        label: "The Scattered Optimist",
+        summary: "Distracts from pain with constant novelty and struggles to follow through.",
+        inner_world: "Fears being trapped and skims over discomfort.",
+        outer_behavior: "Drops commitments, changes focus, overpromises fun.",
+        markers: ["Half-finished plans", "Impulsive choices", "Surface positivity"],
+        growth_notes: "Practice staying with one mundane task until completion daily."
+      },
+      {
+        level: 6,
+        band: "Average",
+        label: "The Hedonic Escapist",
+        summary: "Chases stimulation compulsively and avoids accountability.",
+        inner_world: "Uneasy and afraid of limitation.",
+        outer_behavior: "Skips obligations, tells half-truths, stays in motion.",
+        markers: ["Overconsumption", "Late arrivals", "Deflection"],
+        growth_notes: "Engage a trusted ally to hold daily accountability check-ins."
+      },
+      {
+        level: 7,
+        band: "Unhealthy",
+        label: "The Impulsive Escapee",
+        summary: "Acts recklessly, burns bridges, indulges addictive patterns.",
+        inner_world: "Frantic avoidance of pain or emptiness.",
+        outer_behavior: "Binges experiences, evades consequences, charms to cover damage.",
+        markers: ["Addiction", "Broken promises", "Erratic sleep"],
+        growth_notes: "Seek recovery communities and practice containment rituals."
+      },
+      {
+        level: 8,
+        band: "Unhealthy",
+        label: "The Manic Fixer",
+        summary: "Becomes hyperactive or manic, denying any limits.",
+        inner_world: "Grandiose and disconnected from costs.",
+        outer_behavior: "Creates chaotic schemes and pulls others into risky plans.",
+        markers: ["Sleeplessness", "Rapid speech", "Dangerous risk-taking"],
+        growth_notes: "Pursue medical supervision and reintroduce structure gradually."
+      },
+      {
+        level: 9,
+        band: "Unhealthy",
+        label: "The Desperate Escapee",
+        summary: "Panics, flees responsibilities, or sinks into severe addiction.",
+        inner_world: "Feels trapped and hopeless.",
+        outer_behavior: "Disappears, sabotages relationships, may experience psychosis under extreme stress.",
+        markers: ["Complete avoidance", "Self-destruction", "Crisis behaviours"],
+        growth_notes: "Emergency intervention, detox, and grounded therapeutic containment." }
+    ]
+  },
+  patterns: {
+    strengths: ["Optimism", "Idea generation", "Adaptability", "Charisma", "Connecting people"],
+    pitfalls: ["Impulsivity", "Avoidance of pain", "Overcommitment", "Scattered focus", "Rationalising"],
+    typical_childhood_story: "Learned to stay upbeat and self-entertaining to avoid painful emotions or unmet needs.",
+    common_mistypings: ["Type 3", "Type 8", "Type 9"]
+  },
+  growth_practices: {
+    inner_work: [
+      "Daily meditation focusing on breath and body sensations.",
+      "Journal three feelings without reframing them.",
+      "Choose one commitment to honor completely each week.",
+      "Practice savoring what already exists instead of planning more."
+    ],
+    relational_practices: [
+      "Negotiate realistic plans before saying yes.",
+      "Share fears of limitation honestly.",
+      "Apologize quickly when overpromising.",
+      "Schedule regular check-ins to review commitments."
+    ],
+    somatic_practices: [
+      "Slow stretching or yin yoga to downshift tempo.",
+      "Mindful eating without multitasking.",
+      "Silent walks to build tolerance for stillness."
+    ]
+  },
+  relationships: {
+    what_others_appreciate: ["Playfulness", "Generosity", "Encouragement", "Creativity"],
+    what_others_struggle_with: ["Restlessness", "Inconsistency", "Emotional avoidance", "Difficulty listening"],
+    notes_for_partners_friends:
+      "Enjoy adventures together but co-create grounded rituals. Invite them to express sadness or fear without rushing to solutions."
+  },
+  further_reading: {
+    naranjo_chapters: ["Character and Neurosis – Type Seven"],
+    chestnut_sections: ["The Complete Enneagram – Type Seven subtypes"],
+    riso_sections: ["Personality Types – Type Seven"]
+  }
+});
+
+types.push({
+  id: 8,
+  name: "The Intense Challenger",
+  center: "Body",
+  instinct_triad: "Adaptation",
+  core_summary: {
+    one_liner: "Forceful protectors who assert power to maintain autonomy and guard the vulnerable.",
+    short_paragraph:
+      "Eights move decisively, confronting injustice and resisting control. They value strength, honesty, and directness. Growth channels vitality through vulnerability, tenderness, and strategic stewardship rather than constant battle.",
+    core_motivation: "To be self-reliant, strong, and in control of their environment.",
+    core_fear: "Being harmed, controlled, or powerless."
+  },
+  dynamics: {
+    passion: "Lust",
+    fixation: "Vengeance",
+    virtue: "Innocence",
+    holy_idea: "Truth"
+  },
+  structure: {
+    center_description: "Body type who channels instinctive energy outward to shape reality and protect territory.",
+    stance: "Assertive",
+    harmony: "Reactive",
+    object_relation: "Rejection"
+  },
+  arrows: {
+    stress_point: 5,
+    growth_point: 2,
+    stress_description: "Stress drives them into Type Five withdrawal and secret strategising.",
+    growth_description: "In growth they borrow Type Two warmth, offering nurturance and shared power."
+  },
+  wings: {
+    left_wing: 7,
+    right_wing: 9,
+    description_left: "8w7 is energetic, entrepreneurial, and quick to take risks.",
+    description_right: "8w9 is steadier, more grounded, combining strength with patience."
+  },
+  instincts: {
+    self_pres: {
+      nickname: "The Fortress",
+      description: "Builds strongholds—financial, physical, relational—to ensure safety for self and allies.",
+      focus: ["security", "resources", "endurance"]
+    },
+    social: {
+      nickname: "The Mobilizer",
+      description: "Leads causes, rallies communities, directs power toward collective goals.",
+      focus: ["justice", "leadership", "influence"]
+    },
+    sexual: {
+      nickname: "The Provocateur",
+      description: "Engages intensely, testing loyalty through challenge and passion.",
+      focus: ["truth", "fusion", "intensity"]
+    },
+    overview:
+      "Self-pres Eights fortify, social Eights marshal resources, sexual Eights test bonds fiercely."
+  },
+  levels_of_development: {
+    overview:
+      "Healthy Eights steward power responsibly, average Eights push forcefully, unhealthy Eights become ruthless and destructive.",
+    levels: [
+      {
+        level: 1,
+        band: "Healthy",
+        label: "The Benevolent Champion",
+        summary: "Uses strength to protect and empower others, practising mercy.",
+        inner_world: "Grounded confidence and open-heartedness.",
+        outer_behavior: "Mentors, shares power, and admits vulnerability.",
+        markers: ["Softened tone", "Listening", "Strategic patience"],
+        growth_notes: "Continue integrating rest and emotional honesty to stay open-hearted."
+      },
+      {
+        level: 2,
+        band: "Healthy",
+        label: "The Decisive Strategist",
+        summary: "Acts boldly, negotiates skillfully, and confronts injustice head-on.",
+        inner_world: "Energised, trusting instincts, receptive to counsel.",
+        outer_behavior: "Builds alliances, sets firm boundaries, takes calculated risks.",
+        markers: ["Direct speech", "Clear contracts", "Swift decisions"],
+        growth_notes: "Solicit feedback to prevent blind spots."
+      },
+      {
+        level: 3,
+        band: "Healthy",
+        label: "The Empowering Leader",
+        summary: "Delegates and creates opportunities for others to grow.",
+        inner_world: "Satisfied watching others succeed, trusts the team.",
+        outer_behavior: "Celebrates wins, offers honest feedback, keeps presence steady.",
+        markers: ["Mentorship", "Recognition", "Measured intensity"],
+        growth_notes: "Practise intentional softening in everyday interactions."
+      },
+      {
+        level: 4,
+        band: "Average",
+        label: "The Commanding Protector",
+        summary: "Drives hard, expects loyalty, and overlooks subtle emotions.",
+        inner_world: "Feels responsible to stay strong and wary of betrayal.",
+        outer_behavior: "Directs forcefully, tests trust through challenge.",
+        markers: ["High intensity", "Quick decisions", "Guarded sharing"],
+        growth_notes: "Pause before reacting to perceived disrespect; ask clarifying questions."
+      },
+      {
+        level: 5,
+        band: "Average",
+        label: "The Dominating Maverick",
+        summary: "Controls situations and resents vulnerability.",
+        inner_world: "Fears weakness and interprets care as manipulation.",
+        outer_behavior: "Overrules input and confronts frequently.",
+        markers: ["Blunt speech", "Demanding tone", "Testing loyalty"],
+        growth_notes: "Name softer feelings and apologise when overbearing."
+      },
+      {
+        level: 6,
+        band: "Average",
+        label: "The Aggressive Controller",
+        summary: "Sees life as a power struggle and escalates conflict.",
+        inner_world: "Simmering anger and distrust of motives.",
+        outer_behavior: "Issues ultimatums and may intimidate.",
+        markers: ["Raised voice", "Jaw tension", "Ultimatums"],
+        growth_notes: "Engage somatic calming and reflective listening before reacting."
+      },
+      {
+        level: 7,
+        band: "Unhealthy",
+        label: "The Vengeful Enforcer",
+        summary: "Uses power to dominate and destroy perceived threats.",
+        inner_world: "Vindictive narratives and fear of being controlled.",
+        outer_behavior: "Retaliates harshly, may become menacing.",
+        markers: ["Threats", "Intimidation", "Explosive rage"],
+        growth_notes: "Seek trauma-informed intervention and compassion practices."
+      },
+      {
+        level: 8,
+        band: "Unhealthy",
+        label: "The Hardened Tyrant",
+        summary: "Rules through fear, losing empathy and proportionality.",
+        inner_world: "Chronic suspicion and isolation.",
+        outer_behavior: "Punishes dissent, revels in control, may become abusive.",
+        markers: ["Domination", "Scapegoating", "Isolation"],
+        growth_notes: "Step away from power structures; engage restorative justice work."
+      },
+      {
+        level: 9,
+        band: "Unhealthy",
+        label: "The Ruthless Destroyer",
+        summary: "Acts destructively, disregarding consequences for self or others.",
+        inner_world: "Numb fury and existential despair.",
+        outer_behavior: "Wreaks havoc, may seek revenge at all costs.",
+        markers: ["Violence", "Total burnout", "Alienation"],
+        growth_notes: "Immediate containment and intensive therapeutic remediation required."
+      }
+    ]
+  },
+  patterns: {
+    strengths: ["Courage", "Directness", "Protection", "Vision", "Decisiveness"],
+    pitfalls: ["Excess intensity", "Impatience", "Control", "Over-defensiveness", "Insensitivity"],
+    typical_childhood_story: "Learned to stay strong to avoid vulnerability or being controlled.",
+    common_mistypings: ["Type 1", "Type 3", "Type 6"]
+  },
+  growth_practices: {
+    inner_work: [
+      "Name and allow softer emotions without dismissing them.",
+      "Practise trusting supportive people with small decisions.",
+      "Reflect on long-term impact before reacting.",
+      "Journal about where tenderness could create better outcomes."
+    ],
+    relational_practices: [
+      "Ask for consent before intervening forcefully.",
+      "Share needs without issuing demands.",
+      "Invite others to set the pace sometimes.",
+      "Acknowledge when someone's vulnerability influences you."
+    ],
+    somatic_practices: [
+      "Grounding through weighted exercise followed by stretching.",
+      "Breathwork that extends exhales to relax intensity.",
+      "Massage or bodywork to soften armour."
+    ]
+  },
+  relationships: {
+    what_others_appreciate: ["Protection", "Straight talk", "Bold leadership", "Loyalty"],
+    what_others_struggle_with: ["Intensity", "Dominance", "Quick anger", "Resistance to vulnerability"],
+    notes_for_partners_friends:
+      "Stand your ground kindly, appreciate their protection, and invite moments of softness that show care without power struggles."
+  },
+  further_reading: {
+    naranjo_chapters: ["Character and Neurosis – Type Eight"],
+    chestnut_sections: ["The Complete Enneagram – Type Eight subtypes"],
+    riso_sections: ["Personality Types – Type Eight"]
+  }
+});
+
+types.push({
+  id: 9,
+  name: "The Harmonising Peacemaker",
+  center: "Body",
+  instinct_triad: "Relation",
+  core_summary: {
+    one_liner: "Easygoing stabilisers who seek peace by merging with others and smoothing tension.",
+    short_paragraph:
+      "Nines sense the agendas around them and prioritise harmony, often numbing their own desires. They mediate conflict and create safe spaces, yet can drift into inertia. Growth invites claiming priorities, engaging energy, and expressing perspectives directly.",
+    core_motivation: "To maintain inner and outer peace.",
+    core_fear: "Losing connection or experiencing fragmentation."
+  },
+  dynamics: {
+    passion: "Sloth",
+    fixation: "Indolence",
+    virtue: "Right Action",
+    holy_idea: "Love"
+  },
+  structure: {
+    center_description: "Body type who diffuses instinctive energy to stay comfortable and avoid disruption.",
+    stance: "Withdrawn",
+    harmony: "Positive",
+    object_relation: "Attachment"
+  },
+  arrows: {
+    stress_point: 6,
+    growth_point: 3,
+    stress_description: "Stress pushes them toward Type Six worry and pessimism.",
+    growth_description: "In growth they borrow Type Three focus, owning desires and taking initiative."
+  },
+  wings: {
+    left_wing: 8,
+    right_wing: 1,
+    description_left: "9w8 is more assertive, earthy, and protective.",
+    description_right: "9w1 is idealistic, orderly, and gentle."
+  },
+  instincts: {
+    self_pres: {
+      nickname: "The Comfort Seeker",
+      description: "Builds cosy routines, emphasising ease and simple pleasures.",
+      focus: ["comfort", "familiarity", "routine"]
+    },
+    social: {
+      nickname: "The Community Bridge",
+      description: "Maintains group harmony, smoothing conflict and including everyone.",
+      focus: ["belonging", "mediation", "steadiness"]
+    },
+    sexual: {
+      nickname: "The Devoted Dreamer",
+      description: "Merges intensely with chosen people or projects, idealising connection.",
+      focus: ["fusion", "shared vision", "comfort"]
+    },
+    overview:
+      "Self-pres Nines pursue personal ease, social Nines stabilise communities, sexual Nines seek deep but dreamy fusion."
+  },
+  levels_of_development: {
+    overview:
+      "Healthy Nines engage fully while fostering peace, average Nines avoid conflict by numbing out, unhealthy Nines disconnect from themselves and reality.",
+    levels: [
+      {
+        level: 1,
+        band: "Healthy",
+        label: "The Harmonious Mediator",
+        summary: "Embodies calm presence and stays engaged with personal priorities.",
+        inner_world: "Quiet confidence and connectedness.",
+        outer_behavior: "Voices perspective, listens deeply, and builds consensus.",
+        markers: ["Grounded tone", "Clear opinions", "Generous listening"],
+        growth_notes: "Keep daily check-ins on personal priorities before tending others."
+      },
+      {
+        level: 2,
+        band: "Healthy",
+        label: "The Reassuring Stabilizer",
+        summary: "Creates environments of ease while owning agency.",
+        inner_world: "Relaxed alertness and optimism.",
+        outer_behavior: "Coordinates gently, keeps routines steady, asserts gently.",
+        markers: ["Consistent follow-up", "Kind reminders", "Calm body"],
+        growth_notes: "Take small leadership steps each week to keep momentum."
+      },
+      {
+        level: 3,
+        band: "Healthy",
+        label: "The Supportive Companion",
+        summary: "Balances empathy with decisive action when needed.",
+        inner_world: "Contentment paired with readiness.",
+        outer_behavior: "Helps synchronise teams and follows structured plans.",
+        markers: ["Shared agendas", "Gentle directness", "Steady energy"],
+        growth_notes: "Maintain body activation practices to prevent inertia."
+      },
+      {
+        level: 4,
+        band: "Average",
+        label: "The Comfortable Accommodator",
+        summary: "Defaults to others' preferences and downplays personal needs.",
+        inner_world: "Foggy priorities and quiet resentment.",
+        outer_behavior: "Goes along to keep peace and defers decisions.",
+        markers: ["Soft answers", "Delayed responses", "Mild procrastination"],
+        growth_notes: "List daily what matters most and take one small action."
+      },
+      {
+        level: 5,
+        band: "Average",
+        label: "The Disengaged Bystander",
+        summary: "Numbs out through routine comforts and avoids conflict cues.",
+        inner_world: "Muted feelings and low energy.",
+        outer_behavior: "Distracts with habits, delays commitments, zones out.",
+        markers: ["Screen scrolling", "Chronic lateness", "Shrugging"],
+        growth_notes: "Use timers to re-engage body sensations multiple times a day."
+      },
+      {
+        level: 6,
+        band: "Average",
+        label: "The Passive-Aggressive Resister",
+        summary: "Buried anger leaks through stubbornness and forgetfulness.",
+        inner_world: "Smouldering resentment and fear of upheaval.",
+        outer_behavior: "Agrees outwardly but delays or undermines quietly.",
+        markers: ["Avoidant eye contact", "Noncommittal words", "Stonewalling"],
+        growth_notes: "Name anger directly and request what you prefer."
+      },
+      {
+        level: 7,
+        band: "Unhealthy",
+        label: "The Self-Forgetting Numbness",
+        summary: "Detaches from priorities, letting life happen to them.",
+        inner_world: "Foggy dissociation and deep fatigue.",
+        outer_behavior: "Misses deadlines, fades out of relationships, minimal presence.",
+        markers: ["Blank stare", "Monotone", "Body slump"],
+        growth_notes: "Engage somatic activation and supportive accountability immediately."
+      },
+      {
+        level: 8,
+        band: "Unhealthy",
+        label: "The Dissociated Drifter",
+        summary: "Disconnects from reality, living in fantasies or addictive comforts.",
+        inner_world: "Detached and unreachable.",
+        outer_behavior: "Neglects responsibilities and may rely on others to carry them.",
+        markers: ["Sleeping excessively", "Missed obligations", "Numbing behaviors"],
+        growth_notes: "Seek therapeutic structure and gradually rebuild daily rhythm."
+      },
+      {
+        level: 9,
+        band: "Unhealthy",
+        label: "The Unresponsive Abdicator",
+        summary: "Withdraws entirely, possibly dissociating or shutting down.",
+        inner_world: "Feels invisible and inert.",
+        outer_behavior: "Fails to protect self-care and may let life collapse.",
+        markers: ["Catatonia", "Closed curtains", "Minimal speech"],
+        growth_notes: "Immediate intervention, body activation, and relational repair are vital." }
+    ]
+  },
+  patterns: {
+    strengths: ["Diplomacy", "Patience", "Acceptance", "Stability", "Humility"],
+    pitfalls: ["Inertia", "Conflict avoidance", "Self-forgetting", "Passive resistance", "Numbing"],
+    typical_childhood_story: "Gained safety by blending in and minimising demands.",
+    common_mistypings: ["Type 2", "Type 4", "Type 5"]
+  },
+  growth_practices: {
+    inner_work: [
+      "Begin days with a personal priority list.",
+      "Use breathwork that energises rather than sedates.",
+      "Practise saying a clear no when needed.",
+      "Schedule body activation before sedentary tasks."
+    ],
+    relational_practices: [
+      "Share opinions early in conversations.",
+      "State frustration before it leaks out.",
+      "Ask others to check in if you go quiet.",
+      "Co-create timelines that keep you engaged."
+    ],
+    somatic_practices: [
+      "Brisk walking or swimming to build momentum.",
+      "Standing desk or stretch breaks every hour.",
+      "Voice activation exercises to strengthen presence."
+    ]
+  },
+  relationships: {
+    what_others_appreciate: ["Calm", "Acceptance", "Dependable presence", "Diplomacy"],
+    what_others_struggle_with: ["Indecision", "Passive resistance", "Emotional distance", "Low initiative"],
+    notes_for_partners_friends:
+      "Invite their perspective directly, support firm commitments, and celebrate their decisive moves."
+  },
+  further_reading: {
+    naranjo_chapters: ["Character and Neurosis – Type Nine"],
+    chestnut_sections: ["The Complete Enneagram – Type Nine subtypes"],
+    riso_sections: ["Personality Types – Type Nine"]
+  }
+});
+
+fs.writeFileSync(outputPath, JSON.stringify({ types }, null, 2));
+console.log(`Wrote ${types.length} types to ${outputPath}`);

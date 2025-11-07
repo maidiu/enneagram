@@ -1,0 +1,596 @@
+{
+  "t1": {
+    "type_name": "One",
+    "type_label": "The Reformer",
+    "questions": [
+      {
+        "number": 1,
+        "text": "Most people see me as a serious, no-nonsense person—and when all is said and done, I suppose I am."
+      },
+      {
+        "number": 2,
+        "text": "I have always tried to be honest and objective about myself—and I’m determined to follow my conscience no matter what the cost."
+      },
+      {
+        "number": 3,
+        "text": "While there is some part of me that can be wild, generally speaking that just hasn’t been my style."
+      },
+      {
+        "number": 4,
+        "text": "It seems that I am living with a judge inside my head: sometimes the judge is wise and discerning, but often it is simply stern and harsh."
+      },
+      {
+        "number": 5,
+        "text": "I feel that I have paid a great price for trying to be perfect."
+      },
+      {
+        "number": 6,
+        "text": "I like to laugh as much as anyone—I should do it more often!"
+      },
+      {
+        "number": 7,
+        "text": "My principles and ideals inspire me toward greater achievement and make my life feel meaningful and worthwhile."
+      },
+      {
+        "number": 8,
+        "text": "I do not understand why so many people have such lax standards."
+      },
+      {
+        "number": 9,
+        "text": "So much depends on me getting things done that I have to be more organized and methodical than others."
+      },
+      {
+        "number": 10,
+        "text": "I have a personal sense of mission, maybe even a calling to something higher, and I believe that there is something extraordinary that I may accomplish during my life."
+      },
+      {
+        "number": 11,
+        "text": "I hate mistakes, and so I tend to be extremely thorough to make sure that things are being done properly."
+      },
+      {
+        "number": 12,
+        "text": "Much of my life I have believed that right is right and wrong is wrong—and that’s all there is to it."
+      },
+      {
+        "number": 13,
+        "text": "I have a hard time leaving well enough alone."
+      },
+      {
+        "number": 14,
+        "text": "Many responsibilities have fallen on my shoulders: if I hadn’t risen to the occasion, God only knows what would have happened."
+      },
+      {
+        "number": 15,
+        "text": "I am deeply moved by human nobility and grace under pressure."
+      }
+    ]
+  },
+  "t2": {
+    "type_name": "Two",
+    "type_label": "The Helper",
+    "questions": [
+      {
+        "number": 1,
+        "text": "My genuine concern for others makes me become deeply involved with them—with their hopes, dreams, and needs."
+      },
+      {
+        "number": 2,
+        "text": "It feels natural to be friendly: I strike up conversations easily and am on a first-name basis with everyone."
+      },
+      {
+        "number": 3,
+        "text": "I have found that people respond warmly to me when I give them some attention and encouragement."
+      },
+      {
+        "number": 4,
+        "text": "I cannot see a stray dog in the street without wanting to bring it home."
+      },
+      {
+        "number": 5,
+        "text": "I feel good about the fact that I am a thoughtful, generous person."
+      },
+      {
+        "number": 6,
+        "text": "It’s hard for me to take credit for the many things I’ve done for people, but it bothers me a lot when they don’t seem to notice or care."
+      },
+      {
+        "number": 7,
+        "text": "It is true that I often do more for others than I should—I give away too much and do not think of myself enough."
+      },
+      {
+        "number": 8,
+        "text": "I often find myself trying to win people over—especially if they initially seem indifferent to me."
+      },
+      {
+        "number": 9,
+        "text": "I take special joy in entertaining and hosting my friends and “extended family.”"
+      },
+      {
+        "number": 10,
+        "text": "I can be warm and supportive, but there is more steel in me than others might think."
+      },
+      {
+        "number": 11,
+        "text": "I am able to express my feelings for people more openly than most."
+      },
+      {
+        "number": 12,
+        "text": "I make special efforts to know what’s going on with the people I care about."
+      },
+      {
+        "number": 13,
+        "text": "I see myself as something of a “healer of broken hearts.”"
+      },
+      {
+        "number": 14,
+        "text": "My health and finances have frequently suffered because I have put other people’s needs and interests before my own."
+      },
+      {
+        "number": 15,
+        "text": "I love to knock myself out to make people feel welcomed and appreciated."
+      }
+    ]
+  },
+  "t3": {
+    "type_name": "Three",
+    "type_label": "The Achiever",
+    "questions": [
+      {
+        "number": 1,
+        "text": "I see myself as a highly competent person: it really bothers me when I am anything less than effective and efficient."
+      },
+      {
+        "number": 2,
+        "text": "When things are going well for me, I virtually “glow” with a kind of inner joy in being who I am and having the life that I have."
+      },
+      {
+        "number": 3,
+        "text": "I try to present myself to others in the best possible light—but doesn’t everyone?"
+      },
+      {
+        "number": 4,
+        "text": "My feelings have tended to be foreign to me—I feel things strongly for a little while, and then just get on with things."
+      },
+      {
+        "number": 5,
+        "text": "It’s important to me to feel successful, even if I’m not yet the success I want to be."
+      },
+      {
+        "number": 6,
+        "text": "For better or worse, I am good at covering up my insecurities—people would never guess what I’m really feeling!"
+      },
+      {
+        "number": 7,
+        "text": "I want to make a good impression on people, so I’m usually polite, well-mannered, and friendly."
+      },
+      {
+        "number": 8,
+        "text": "I am aware of how well my friends and colleagues are doing, and I tend to compare myself with them."
+      },
+      {
+        "number": 9,
+        "text": "I often strive to be the best at what I’m doing—if I can’t be outstanding at something, I generally don’t bother with it."
+      },
+      {
+        "number": 10,
+        "text": "Sometimes I’ve had to cut corners a little to achieve my goals."
+      },
+      {
+        "number": 11,
+        "text": "When I am insecure, I can be rather aloof and cool with people."
+      },
+      {
+        "number": 12,
+        "text": "It really bothers me when others don’t acknowledge the excellence of what I’ve done."
+      },
+      {
+        "number": 13,
+        "text": "I’m more adaptable than most: if things aren’t working well, I know how to change my behavior to obtain the results I want."
+      },
+      {
+        "number": 14,
+        "text": "I always have a goal in focus and know how to motivate myself to achieve it."
+      },
+      {
+        "number": 15,
+        "text": "I have a workaholic streak—I feel adrift if I’m not accomplishing things."
+      }
+    ]
+  },
+  "t4": {
+    "type_name": "Four",
+    "type_label": "The Individualist",
+    "questions": [
+      {
+        "number": 1,
+        "text": "Many people see me as enigmatic, difficult, and contradictory—and I like that about myself!"
+      },
+      {
+        "number": 2,
+        "text": "I tend to brood over my negative feelings for a long time before getting free of them."
+      },
+      {
+        "number": 3,
+        "text": "I often feel alone and lonely, even when I’m around people I’m close to."
+      },
+      {
+        "number": 4,
+        "text": "If I’m criticized or misunderstood, I tend to withdraw and sulk."
+      },
+      {
+        "number": 5,
+        "text": "I find it difficult to get involved with projects if I don’t have creative control."
+      },
+      {
+        "number": 6,
+        "text": "I tend not to follow rules or to go along with expectations because I want to put my own special touch on whatever I do."
+      },
+      {
+        "number": 7,
+        "text": "By most standards, I’m fairly dramatic and temperamental."
+      },
+      {
+        "number": 8,
+        "text": "I tend to spend quite a bit of time imagining scenes and conversations that haven’t necessarily happened."
+      },
+      {
+        "number": 9,
+        "text": "I long for someone to rescue me and sweep me away from all of this dreary mess."
+      },
+      {
+        "number": 10,
+        "text": "When things get tough, I tend to crumble and give up—perhaps I give up too easily."
+      },
+      {
+        "number": 11,
+        "text": "I can forgive almost anything except bad taste."
+      },
+      {
+        "number": 12,
+        "text": "Generally, I don’t enjoy working too closely with others."
+      },
+      {
+        "number": 13,
+        "text": "Finding myself and being true to my emotional needs have been extremely important motivations for me."
+      },
+      {
+        "number": 14,
+        "text": "I don’t like either to take the lead or to be a follower."
+      },
+      {
+        "number": 15,
+        "text": "I am acutely aware of my intuitions, whether or not I have the courage to act on them."
+      }
+    ]
+  },
+  "t5": {
+    "type_name": "Five",
+    "type_label": "The Investigator",
+    "questions": [
+      {
+        "number": 1,
+        "text": "I like to get into things in depth and pore over details until I’ve figured something out as completely as possible."
+      },
+      {
+        "number": 2,
+        "text": "I am an extremely private person who doesn’t let many people into my world."
+      },
+      {
+        "number": 3,
+        "text": "I do not feel very big or powerful—more small and invisible: I’d make a good spy!"
+      },
+      {
+        "number": 4,
+        "text": "Other people would think I’m crazy if they knew what I was thinking most of the time."
+      },
+      {
+        "number": 5,
+        "text": "Only by getting accurate information can you make a rational decision—but then, most people aren’t really rational."
+      },
+      {
+        "number": 6,
+        "text": "My family thinks that I am somewhat strange or eccentric—they’ve certainly told me that I need to get out more."
+      },
+      {
+        "number": 7,
+        "text": "I can talk a blue streak when I want to; most of the time, though, I prefer to just watch all the craziness around me."
+      },
+      {
+        "number": 8,
+        "text": "If you need a problem solved, let me work on it by myself, and I’ll come up with the answer."
+      },
+      {
+        "number": 9,
+        "text": "When you really think about it, you can’t get much stranger than so-called normal behavior."
+      },
+      {
+        "number": 10,
+        "text": "I tend to take a long time fine-tuning projects I’m working on."
+      },
+      {
+        "number": 11,
+        "text": "Most people are so incredibly ignorant, it’s amazing that anything works at all!"
+      },
+      {
+        "number": 12,
+        "text": "I know a lot about a lot of things, and in a few areas, I consider myself an expert."
+      },
+      {
+        "number": 13,
+        "text": "I am extremely curious and enjoy investigating why things are the way they are—even obvious things are not really so obvious when you really look at them."
+      },
+      {
+        "number": 14,
+        "text": "My mind is so intense and active that I often feel like it’s on fire."
+      },
+      {
+        "number": 15,
+        "text": "Often I lose all track of time because I’m concentrating so completely on what I’m doing."
+      }
+    ]
+  },
+  "t6": {
+    "type_name": "Six",
+    "type_label": "The Loyalist",
+    "questions": [
+      {
+        "number": 1,
+        "text": "I am attracted to authority but distrustful of it at the same time."
+      },
+      {
+        "number": 2,
+        "text": "I am very emotional, although I don’t often show what I feel—except to those I’m close with—and even then, not always."
+      },
+      {
+        "number": 3,
+        "text": "If I make a mistake, I fear that everyone is going to jump down my throat."
+      },
+      {
+        "number": 4,
+        "text": "I feel more secure doing what’s expected of me than striking out on my own."
+      },
+      {
+        "number": 5,
+        "text": "I may not always agree with the rules—and I don’t always follow them—but I want to know what they are!"
+      },
+      {
+        "number": 6,
+        "text": "I tend to have strong first impressions about people that are difficult to change."
+      },
+      {
+        "number": 7,
+        "text": "There are a few people I really look up to—they are sort of my heroes."
+      },
+      {
+        "number": 8,
+        "text": "I don’t like making big decisions, but I certainly don’t want anyone else to make them tor me!"
+      },
+      {
+        "number": 9,
+        "text": "Some people see me as jittery and nervous—but they don’t know the half of it!"
+      },
+      {
+        "number": 10,
+        "text": "I know how much I mess up, so being suspicious of what others are up to just makes sense to me."
+      },
+      {
+        "number": 11,
+        "text": "I want to trust people, but often find myself questioning their motives."
+      },
+      {
+        "number": 12,
+        "text": "I am a real hard worker: I keep plodding along until the job gets done."
+      },
+      {
+        "number": 13,
+        "text": "I sound out the opinions of people I trust before I have to make a big decision."
+      },
+      {
+        "number": 14,
+        "text": "It’s really weird: I can be skeptical, even cynical, about all kinds of things, and then turn around and fall for something hook, line, and sinker."
+      },
+      {
+        "number": 15,
+        "text": "Anxiety seems to be my middle name."
+      }
+    ]
+  },
+  "t7": {
+    "type_name": "Seven",
+    "type_label": "The Enthusiast",
+    "questions": [
+      {
+        "number": 1,
+        "text": "I love traveling and discovering different kinds of foods, people, and experiences—the whole fabulous whirlwind of life!"
+      },
+      {
+        "number": 2,
+        "text": "My calendar is usually full, and I like to keep it that way: no grass is going to grow under my feet!"
+      },
+      {
+        "number": 3,
+        "text": "What’s important to me is excitement and variety rather than comfort and playing it safe—although I’ll take my comforts wherever I can find them."
+      },
+      {
+        "number": 4,
+        "text": "My mind is always chattering—sometimes it seems like I’m thinking about ten things at once!"
+      },
+      {
+        "number": 5,
+        "text": "One thing I absolutely cannot stand is being bored—and I make sure that I am never boring myself."
+      },
+      {
+        "number": 6,
+        "text": "I’m pretty committed when I’m in a relationship, but when it’s over, I move on."
+      },
+      {
+        "number": 7,
+        "text": "I am curious and adventurous and am usually the first one of my friends to try whatever is new and interesting."
+      },
+      {
+        "number": 8,
+        "text": "When I no longer enjoy doing something, I stop doing it."
+      },
+      {
+        "number": 9,
+        "text": "I’m not just a “fun person”—there is a serious, even dark side to me, although I do not like to go there very much."
+      },
+      {
+        "number": 10,
+        "text": "I’m good at the big picture, not so much the little details: it’s more enjoyable for me to brainstorm a lot of new ideas than to get involved with implementing them."
+      },
+      {
+        "number": 11,
+        "text": "When I really want something, I usually find a way to get it."
+      },
+      {
+        "number": 12,
+        "text": "Things get me down once in a while, but I quickly pop back up again."
+      },
+      {
+        "number": 13,
+        "text": "One of my main problems is that I am easily distracted and can get too scattered."
+      },
+      {
+        "number": 14,
+        "text": "I tend to spend more money than I probably should."
+      },
+      {
+        "number": 15,
+        "text": "Other people are great to have along—as long as they want to go where I’m going."
+      }
+    ]
+  },
+  "t8": {
+    "type_name": "Eight",
+    "type_label": "The Challenger",
+    "questions": [
+      {
+        "number": 1,
+        "text": "I am extremely independent and don’t like having to rely on others for what I really need."
+      },
+      {
+        "number": 2,
+        "text": "I feel that “you have to break some eggs to make an omelet.”"
+      },
+      {
+        "number": 3,
+        "text": "When I care about people, I often begin to think of them as “my people” and feel like I need to watch out for their interests."
+      },
+      {
+        "number": 4,
+        "text": "I know how to get results: I know how to reward people and how to put pressure on them to get things done."
+      },
+      {
+        "number": 5,
+        "text": "I do not have much sympathy for those who are weak and vacillating—weakness just invites trouble."
+      },
+      {
+        "number": 6,
+        "text": "I am strong-willed and do not give up or back down easily."
+      },
+      {
+        "number": 7,
+        "text": "I am never prouder than when I see someone I’ve taken under my wing make it on their own."
+      },
+      {
+        "number": 8,
+        "text": "I have a tender, even somewhat sentimental side that I show to very few people."
+      },
+      {
+        "number": 9,
+        "text": "People who know me appreciate the fact that I talk straight to them and tell them exactly what’s on my mind."
+      },
+      {
+        "number": 10,
+        "text": "I’ve had to work hard for everything I have—I think struggle is good because it toughens you up and makes you clear about what you want."
+      },
+      {
+        "number": 11,
+        "text": "I see myself as a challenger, as someone who pushes people beyond their comfort zone to achieve their best."
+      },
+      {
+        "number": 12,
+        "text": "My sense of humor is earthy, sometimes even crude, although I think most people are too prissy and thin-skinned."
+      },
+      {
+        "number": 13,
+        "text": "I can get into a towering rage, but it blows over."
+      },
+      {
+        "number": 14,
+        "text": "I feel most alive when I do what others think is impossible: I like to go to the edge and see if I can beat the odds."
+      },
+      {
+        "number": 15,
+        "text": "Somebody usually has to come up on the short end of the stick, and I don’t want it to be me."
+      }
+    ]
+  },
+  "t9": {
+    "type_name": "Nine",
+    "type_label": "The Peacemaker",
+    "questions": [
+      {
+        "number": 1,
+        "text": "What people seem to like about me is that they feel safe around me."
+      },
+      {
+        "number": 2,
+        "text": "I don’t mind being around people, and I don’t mind being alone—either way is fine, as long as I’m at peace with myself."
+      },
+      {
+        "number": 3,
+        "text": "I’ve found a certain balance in my life, and I see no reason to mess with it."
+      },
+      {
+        "number": 4,
+        "text": "Being “comfortable” in every sense of the word appeals to me a lot."
+      },
+      {
+        "number": 5,
+        "text": "I would rather give someone else their way than create a scene."
+      },
+      {
+        "number": 6,
+        "text": "I don’t know exactly how I do it, but I don’t let things get to me."
+      },
+      {
+        "number": 7,
+        "text": "I’m pretty easy to please and usually feel that what I have is good enough for me."
+      },
+      {
+        "number": 8,
+        "text": "I’ve been told that I seem distracted and absentminded—the fact is I understand things, but I just don’t want to react to them."
+      },
+      {
+        "number": 9,
+        "text": "I don’t think I’m particularly stubborn, but people say that I can be hard-headed once I make up my mind."
+      },
+      {
+        "number": 10,
+        "text": "Most people get themselves worked up too easily: I’m much more even-keeled."
+      },
+      {
+        "number": 11,
+        "text": "You’ve got to take what life brings, since there’s not much you can do about it anyway!"
+      },
+      {
+        "number": 12,
+        "text": "I can easily see different points of view, and I tend to agree with people more than I disagree with them."
+      },
+      {
+        "number": 13,
+        "text": "I believe in emphasizing the positive rather than dwelling on the negative."
+      },
+      {
+        "number": 14,
+        "text": "I have what might be called a philosophy of life that guides me and gives me a great deal of comfort in difficult times."
+      },
+      {
+        "number": 15,
+        "text": "During the day, I do everything that needs to be done, but when the day is over, I really know how to relax and take it easy."
+      }
+    ]
+  }
+}
