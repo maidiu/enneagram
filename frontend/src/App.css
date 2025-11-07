@@ -27,6 +27,23 @@
   font-size: 1.05rem;
 }
 
+.app__results-link {
+  margin-top: 0.75rem;
+  align-self: center;
+  font-weight: 600;
+  color: #1d4ed8;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: color 150ms ease;
+}
+
+.app__results-link:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
 .card {
   width: min(960px, 100%);
   background: #ffffff;
@@ -111,6 +128,26 @@
 .scale__label {
   font-size: 0.95rem;
   color: #475569;
+}
+
+@media (max-width: 520px) {
+  .scale {
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .scale__option {
+    padding: 0.6rem 0.75rem;
+    border-radius: 12px;
+  }
+
+  .scale__value {
+    font-size: 1.1rem;
+  }
+
+  .scale__label {
+    font-size: 0.85rem;
+  }
 }
 
 .card__actions {

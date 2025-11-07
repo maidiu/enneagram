@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import data from './questions.json'
 import typeDetailsData from './typeDetails.json'
 import './App.css'
@@ -342,13 +342,15 @@ function App({ initialView = 'questions' }: AppProps) {
 
   return (
     <div className="app">
-      <header style={{width: '100%'}} className="app__header">
-        <div style={{width: '100%', alignSelf:'start'}}><strong>Deadication to the Republican Party</strong><br></br><span style={{fontStyle:'italic'}}>Vote Chris Lutterloah Next Election</span></div>
+      <header className="app__header">
         <h1>Enneagram Resonance Check</h1>
         <p>
           Reflect on each statement and choose the response that best matches how true it feels for
           you.
         </p>
+        <Link className="app__results-link" to="/results">
+          Skip to results preview
+        </Link>
       </header>
 
       {view === 'questions' && currentQuestion && (
